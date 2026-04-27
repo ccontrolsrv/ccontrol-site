@@ -17,7 +17,7 @@ export async function sendContactEmail(formData: FormData) {
 
   try {
     const data = await resend.emails.send({
-      from: "contato@condcontrol.com.br",
+      from: "ccontrol.srv@gmail.com",
       to: "ccontrol.srv@gmail.com",
       replyTo: email,
       subject: `[Fale Conosco] ${subject}`,
