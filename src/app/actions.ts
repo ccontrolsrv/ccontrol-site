@@ -16,8 +16,11 @@ export async function sendContactEmail(formData: FormData) {
   }
 
   try {
+    console.log("Enviando email com Resend...");
+    console.log("API Key:", process.env.RESEND_API_KEY ? "OK" : "MISSING");
+    
     const data = await resend.emails.send({
-      from: "ccontrol.srv@gmail.com",
+      from: "onboarding@resend.dev",
       to: "ccontrol.srv@gmail.com",
       replyTo: email,
       subject: `[Fale Conosco] ${subject}`,
